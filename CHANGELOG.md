@@ -5,20 +5,30 @@ All notable changes to Creditum will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [2.0.0] - 2025-01-02
 
-### Added
-- REST API public beta
-- Enhanced documentation portal
-- Mobile-responsive design improvements
+### 🎉 Major Features
+- **Comprehensive Stress Testing**: Full economic scenario analysis with side-by-side normal vs stressed result comparisons
+- **Dynamic Recommendations Engine**: Personalized, decision-specific action plans that adapt to APPROVED/DECLINED/CONDITIONAL outcomes  
+- **Enhanced AI Explainability**: Intelligent text parsing with visual formatting, section recognition, and metric highlighting
+- **Priority-Based Action Items**: Timeline and impact-driven recommendation system with HIGH/MEDIUM/LOW priority classifications
 
-### Changed
-- Improved credit scoring algorithm accuracy
-- Updated economic data integration
+### 🎯 User Experience Enhancements
+- **Visual Differentiation**: Clear distinction between normal and stressed economic scenarios with prominent warning banners
+- **Complementary Sections**: Eliminated overlap between decision explanations and improvement recommendations
+- **Interactive Checklists**: Quick-start action items for immediate user engagement
+- **Educational Content**: Comprehensive explanations of stress testing and economic impact
 
-### Fixed
-- Minor UI/UX improvements
-- Performance optimizations
+### 🔧 Technical Improvements
+- **Dynamic Model Performance Metrics**: Real-time precision, recall, F1-score, and AUC-ROC display
+- **Intelligent Content Parsing**: Advanced section recognition and formatting for AI explanations
+- **Decision-Specific Logic**: Unique experiences for APPROVED, DECLINED, and CONDITIONAL decisions
+- **Enhanced Data Flow**: Improved API response handling and null-safe access patterns
+
+### 📚 Platform Updates
+- **Feature Status**: Explainability now fully implemented and available
+- **Comprehensive Documentation**: Added user guides for stress testing and recommendation interpretation
+- **Educational Resources**: In-depth explanations of economic scenarios and their impact
 
 ## [1.0.0] - 2025-01-01
 

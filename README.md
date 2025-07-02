@@ -19,12 +19,29 @@ Install via pip: `pip install credit-risk-creditum`
 
 ## ✨ Key Features
 
-- **Credit Risk Assessment**: Advanced scoring models with machine learning capabilities
-- **Stress Testing**: Simulate various economic scenarios and their impact on credit portfolios
+### 🎯 Core Assessment Capabilities
+- **Individual & Corporate Credit Assessment**: Comprehensive personal and business loan risk evaluation
+- **AI-Powered Explainability**: Intelligent text parsing with visual formatting and decision explanations
+- **Dynamic Recommendations Engine**: Personalized, priority-based action plans for each decision outcome
 - **Real-time Economic Data**: Integration with Federal Reserve Economic Data (FRED)
+
+### 🧪 Advanced Stress Testing
+- **Comprehensive Scenario Analysis**: Economic Recession, High Inflation, and Market Volatility scenarios
+- **Side-by-Side Comparisons**: Normal vs stressed conditions with visual differentiation
+- **Educational Impact Analysis**: Understand how economic changes affect borrowing capacity
+- **Stress-Resilient Assessments**: Test application performance under adverse conditions
+
+### 🎨 Enhanced User Experience
+- **Interactive Simulator**: Web-based tool with comprehensive visualization
+- **Priority-Based Recommendations**: Timeline and impact-driven improvement suggestions
+- **Visual Stress Indicators**: Clear banners and context when stress testing is active
+- **Quick Start Checklists**: Immediate action items for each decision type
+
+### 🔧 Technical Features
 - **CRA Compliance**: Community Reinvestment Act heatmap analysis
-- **Interactive Simulator**: Web-based tool for instant credit risk calculations
 - **API Access**: RESTful API for seamless integration
+- **Machine Learning Models**: Random Forest and XGBoost for enhanced predictions
+- **Configurable Risk Parameters**: Customizable thresholds for different lending criteria
 
 ## 🛠️ Technology Stack
 
