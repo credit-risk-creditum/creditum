@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creditum Changelog | Documentation</title>
+    <link rel="stylesheet" href="docs-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <style>
+        .version-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .version-header h3 {
+            margin: 0;
+            color: white;
+        }
+        
+        .version-date {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+        
+        .unreleased {
+            background: linear-gradient(135deg, var(--warning-color), #f59e0b);
+        }
+        
+        .change-section {
+            margin: 1rem 0;
+        }
+        
+        .change-section h4 {
+            color: var(--text-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .added { border-color: var(--success-color); }
+        .changed { border-color: var(--primary-color); }
+        .fixed { border-color: var(--warning-color); }
+        .security { border-color: var(--error-color); }
+        
+        .release-info {
+            background-color: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+        }
+        
+        .policy-section {
+            background-color: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .update-instructions {
+            background-color: #f0f9ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <button class="mobile-menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+    
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <h2>📚 Documentation</h2>
+            
+            <div class="nav-section">
+                <h3>Getting Started</h3>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="readme.html" class="nav-link">Overview</a>
+                <a href="https://crcreditum.com" class="nav-link" target="_blank">Live App ↗</a>
+            </div>
+            
+            <div class="nav-section">
+                <h3>Development</h3>
+                <a href="roadmap.html" class="nav-link">Roadmap</a>
+                <a href="contributing.html" class="nav-link">Contributing</a>
+                <a href="changelog.html" class="nav-link active">Changelog</a>
+            </div>
+            
+            <div class="nav-section">
+                <h3>Resources</h3>
+                <a href="https://pypi.org/project/credit-risk-creditum/" class="nav-link" target="_blank">Python Package ↗</a>
+                <a href="https://github.com/credit-risk-creditum/creditum" class="nav-link" target="_blank">GitHub ↗</a>
+                <a href="https://www.linkedin.com/company/creditum-credit-risk/" class="nav-link" target="_blank">LinkedIn ↗</a>
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <h1>Changelog</h1>
+
+                <p>All notable changes to Creditum will be documented in this file.</p>
+
+                <p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/" target="_blank">Keep a Changelog</a>, and this project adheres to <a href="https://semver.org/spec/v2.0.0.html" target="_blank">Semantic Versioning</a>.</p>
+
+                <div class="toc">
+                    <h3>Table of Contents</h3>
+                    <ul>
+                        <li><a href="#unreleased">Unreleased</a></li>
+                        <li><a href="#v1-0-0">v1.0.0 - 2025-01-01</a></li>
+                        <li><a href="#v0-3-0">v0.3.0 - 2024-12-15</a></li>
+                        <li><a href="#v0-2-0">v0.2.0 - 2024-11-30</a></li>
+                        <li><a href="#v0-1-0">v0.1.0 - 2024-11-01</a></li>
+                        <li><a href="#release-process">Release Process</a></li>
+                        <li><a href="#getting-updates">Getting Updates</a></li>
+                    </ul>
+                </div>
+
+                <div class="version-header unreleased" id="unreleased">
+                    <h3>[Unreleased]</h3>
+                </div>
+
+                <div class="change-section">
+                    <h4 class="added">Added</h4>
+                    <ul>
+                        <li>REST API public beta</li>
+                        <li>Enhanced documentation portal</li>
+                        <li>Mobile-responsive design improvements</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <h4 class="changed">Changed</h4>
+                    <ul>
+                        <li>Improved credit scoring algorithm accuracy</li>
+                        <li>Updated economic data integration</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <h4 class="fixed">Fixed</h4>
+                    <ul>
+                        <li>Minor UI/UX improvements</li>
+                        <li>Performance optimizations</li>
+                    </ul>
+                </div>
+
+                <div class="version-header" id="v1-0-0">
+                    <h3>[1.0.0]</h3>
+                    <span class="version-date">2025-01-01</span>
+                </div>
+
+                <div class="change-section">
+                    <h4 class="added">Added</h4>
+                    <ul>
+                        <li>Initial public release</li>
+                        <li>Web-based credit risk simulator</li>
+                        <li>Python package for credit scoring</li>
+                        <li>Basic stress testing capabilities</li>
+                        <li>FRED economic data integration</li>
+                        <li>CRA compliance heatmap</li>
+                        <li>Docker deployment support</li>
+                        <li>Comprehensive documentation</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><strong>Credit Scoring</strong>: Advanced ML-based credit risk assessment</li>
+                        <li><strong>Stress Testing</strong>: Portfolio analysis under adverse scenarios</li>
+                        <li><strong>Economic Integration</strong>: Real-time FRED data incorporation</li>
+                        <li><strong>Web Interface</strong>: User-friendly simulation tools</li>
+                        <li><strong>API Ready</strong>: Foundation for upcoming REST API</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <h4>Technical</h4>
+                    <ul>
+                        <li>FastAPI backend with PostgreSQL</li>
+                        <li>React/TypeScript frontend</li>
+                        <li>Docker containerization</li>
+                        <li>Redis caching layer</li>
+                        <li>Comprehensive test coverage</li>
+                    </ul>
+                </div>
+
+                <div class="version-header" id="v0-3-0">
+                    <h3>[0.3.0]</h3>
+                    <span class="version-date">2024-12-15</span>
+                </div>
+
+                <div class="change-section">
+                    <h4 class="added">Added</h4>
+                    <ul>
+                        <li>CRA heatmap visualization</li>
+                        <li>Enhanced portfolio stress testing</li>
+                        <li>Mobile-responsive design</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <h4 class="changed">Changed</h4>
+                    <ul>
+                        <li>Improved user interface</li>
+                        <li>Optimized performance</li>
+                        <li>Enhanced error handling</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <h4 class="fixed">Fixed</h4>
+                    <ul>
+                        <li>Data validation improvements</li>
+                        <li>Cross-browser compatibility</li>
+                    </ul>
+                </div>
+
+                <div class="version-header" id="v0-2-0">
+                    <h3>[0.2.0]</h3>
+                    <span class="version-date">2024-11-30</span>
+                </div>
+
+                <div class="change-section">
+                    <h4 class="added">Added</h4>
+                    <ul>
+                        <li>Economic data integration</li>
+                        <li>Stress testing framework</li>
+                        <li>User authentication system</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <h4 class="changed">Changed</h4>
+                    <ul>
+                        <li>Redesigned credit scoring algorithm</li>
+                        <li>Updated documentation</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <h4 class="security">Security</h4>
+                    <ul>
+                        <li>Enhanced data encryption</li>
+                        <li>Improved access controls</li>
+                    </ul>
+                </div>
+
+                <div class="version-header" id="v0-1-0">
+                    <h3>[0.1.0]</h3>
+                    <span class="version-date">2024-11-01</span>
+                </div>
+
+                <div class="change-section">
+                    <h4 class="added">Added</h4>
+                    <ul>
+                        <li>Initial alpha release</li>
+                        <li>Basic credit scoring functionality</li>
+                        <li>Simple web interface</li>
+                        <li>Core risk assessment features</li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <h2 id="release-process">Release Process</h2>
+
+                <div class="policy-section">
+                    <h3>Version Numbering</h3>
+                    <ul>
+                        <li><strong>Major</strong> (X.0.0): Breaking changes, major new features</li>
+                        <li><strong>Minor</strong> (0.X.0): New features, backwards compatible</li>
+                        <li><strong>Patch</strong> (0.0.X): Bug fixes, minor improvements</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h3>Release Schedule</h3>
+                    <ul>
+                        <li><strong>Major releases</strong>: Quarterly</li>
+                        <li><strong>Minor releases</strong>: Monthly</li>
+                        <li><strong>Patch releases</strong>: As needed</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h3>Support Policy</h3>
+                    <ul>
+                        <li><strong>Current version</strong>: Full support</li>
+                        <li><strong>Previous major</strong>: Security updates only</li>
+                        <li><strong>Older versions</strong>: No support</li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <h2 id="getting-updates">Getting Updates</h2>
+
+                <div class="update-instructions">
+                    <h3>Web Application</h3>
+                    <p>Updates are deployed automatically. No action required.</p>
+                </div>
+
+                <div class="update-instructions">
+                    <h3>Python Package</h3>
+                    <pre><code class="language-bash">pip install --upgrade credit-risk-creditum</code></pre>
+                </div>
+
+                <div class="update-instructions">
+                    <h3>API</h3>
+                    <p>API versions are maintained for backwards compatibility. Deprecated endpoints will have 6-month sunset periods.</p>
+                </div>
+
+                <hr>
+
+                <p><em>For detailed technical changes, see our <a href="https://github.com/credit-risk-creditum/creditum/releases" target="_blank">GitHub releases</a>.</em></p>
+            </div>
+            
+            <footer>
+                <p><a href="index.html">← Back to Documentation Home</a></p>
+            </footer>
+        </main>
+    </div>
+    
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+        
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (window.innerWidth <= 768 && 
+                !sidebar.contains(event.target) && 
+                !toggle.contains(event.target) && 
+                sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>
