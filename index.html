@@ -3,152 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Credit Risk Creditum - Advanced Credit Risk Assessment Platform</title>
-    <meta name="description" content="Creditum provides advanced credit risk assessment with stress testing capabilities. Python package available on PyPI.">
+    <title>Creditum Documentation</title>
+    <link rel="stylesheet" href="docs-style.css">
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: #f5f5f5;
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem;
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+            text-align: center;
         }
-        .container {
-            background: white;
-            padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
-        h1 {
-            color: #2563eb;
-            border-bottom: 3px solid #2563eb;
-            padding-bottom: 1rem;
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
         }
-        .badges {
+
+        .hero-buttons {
             display: flex;
-            gap: 0.5rem;
-            margin: 1rem 0;
+            gap: 1rem;
+            justify-content: center;
             flex-wrap: wrap;
         }
-        .badge {
-            padding: 0.25rem 0.5rem;
-            background: #e5e7eb;
-            border-radius: 4px;
-            font-size: 0.875rem;
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: transform 0.2s;
         }
-        .links {
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .button.secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background-color: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .feature-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Quick Links Section */
+        .quick-links {
+            background-color: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            margin-bottom: 3rem;
+        }
+
+        .quick-links h2 {
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
-            margin: 2rem 0;
         }
-        .link-card {
-            background: #f3f4f6;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
             text-decoration: none;
-            color: #1f2937;
-            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.2s;
         }
-        .link-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+        .link-item:hover {
+            background-color: #e5e7eb;
         }
-        .link-card h3 {
-            margin: 0 0 0.5rem 0;
-            color: #2563eb;
-        }
-        .install-code {
-            background: #1f2937;
-            color: #f9fafb;
-            padding: 1rem;
-            border-radius: 6px;
-            font-family: monospace;
-            margin: 1rem 0;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #e5e7eb;
-            color: #6b7280;
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <button class="mobile-menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+    
     <div class="container">
-        <h1>🏦 Credit Risk Creditum</h1>
-        <p><strong>Advanced Credit Risk Assessment Platform with Stress Testing Capabilities</strong></p>
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <h2>📚 Documentation</h2>
+            
+            <div class="nav-section">
+                <h3>Getting Started</h3>
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="readme.html" class="nav-link">Overview</a>
+                <a href="https://crcreditum.com" class="nav-link" target="_blank">Live App ↗</a>
+            </div>
+            
+            <div class="nav-section">
+                <h3>Development</h3>
+                <a href="roadmap.html" class="nav-link">Roadmap</a>
+                <a href="contributing.html" class="nav-link">Contributing</a>
+                <a href="changelog.html" class="nav-link">Changelog</a>
+            </div>
+            
+            <div class="nav-section">
+                <h3>Resources</h3>
+                <a href="https://pypi.org/project/credit-risk-creditum/" class="nav-link" target="_blank">Python Package ↗</a>
+                <a href="https://github.com/credit-risk-creditum/creditum" class="nav-link" target="_blank">GitHub ↗</a>
+                <a href="https://www.linkedin.com/company/creditum-credit-risk/" class="nav-link" target="_blank">LinkedIn ↗</a>
+            </div>
+        </nav>
         
-        <div class="badges">
-            <span class="badge">Python 3.8+</span>
-            <span class="badge">TypeScript 4.5+</span>
-            <span class="badge">MIT License</span>
-            <span class="badge">Active Development</span>
-        </div>
-
-        <h2>🚀 Quick Start</h2>
-        <p>Install the Python package:</p>
-        <div class="install-code">pip install credit-risk-creditum</div>
-
-        <h2>📚 Resources</h2>
-        <div class="links">
-            <a href="https://github.com/credit-risk-creditum/creditum" class="link-card">
-                <h3>📖 Documentation</h3>
-                <p>GitHub README & guides</p>
-            </a>
-            <a href="https://pypi.org/project/credit-risk-creditum/" class="link-card">
-                <h3>📦 Python Package</h3>
-                <p>PyPI package page</p>
-            </a>
-            <a href="https://crcreditum.com" class="link-card">
-                <h3>🌐 Web Platform</h3>
-                <p>Live application</p>
-            </a>
-            <a href="https://github.com/credit-risk-creditum/creditum/issues" class="link-card">
-                <h3>🐛 Issues</h3>
-                <p>Report bugs & features</p>
-            </a>
-        </div>
-
-        <h2>✨ Key Features</h2>
-        <ul>
-            <li><strong>Credit Risk Assessment</strong> - Advanced ML-based scoring models</li>
-            <li><strong>Stress Testing</strong> - Simulate economic scenarios (recession, inflation, etc.)</li>
-            <li><strong>Real-time Economic Data</strong> - Integration with Federal Reserve data</li>
-            <li><strong>CLI Interface</strong> - Command-line tools for batch processing</li>
-            <li><strong>Google Colab Support</strong> - Run examples directly in the cloud</li>
-        </ul>
-
-        <h2>💻 Example Usage</h2>
-        <div class="install-code">
-from credit_risk import CreditApplication
-
-app = CreditApplication()
-
-# Individual credit assessment
-application = {
-    'credit_score': 720,
-    'monthly_income': 5000,
-    'monthly_debt': 1500,
-    'loan_amount': 25000,
-    'loan_purpose': 'home'
-}
-
-decision = app.make_decision(application, 'individual')
-print(f"Decision: {decision['decision']}")
-print(f"Risk Score: {decision['risk_score']:.3f}")
-        </div>
-
-        <div class="footer">
-            <p>© 2025 Creditum. Created by <a href="https://linkedin.com/in/omosholaowolabi">Omoshola Owolabi</a></p>
-            <p><a href="https://github.com/credit-risk-creditum/creditum">View on GitHub</a> | 
-               <a href="https://pypi.org/project/credit-risk-creditum/">PyPI Package</a> | 
-               <a href="https://crcreditum.com">Web Platform</a></p>
-        </div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1>Creditum Documentation</h1>
+                <p>Advanced Credit Risk Assessment Platform</p>
+                <div class="hero-buttons">
+                    <a href="readme.html" class="button">Get Started</a>
+                    <a href="https://crcreditum.com" class="button secondary" target="_blank">Try Live Demo</a>
+                </div>
+            </section>
+            
+            <!-- Badges -->
+            <div class="badges">
+                <span class="badge python">Python 3.8+</span>
+                <span class="badge typescript">TypeScript 4.5+</span>
+                <span class="badge license">MIT License</span>
+                <span class="badge status">Active Development</span>
+            </div>
+            
+            <!-- Features Grid -->
+            <section class="features-grid">
+                <div class="feature-card">
+                    <h3>📖 Project Overview</h3>
+                    <p>Learn about Creditum's comprehensive credit risk assessment platform, key features, and technology stack.</p>
+                    <a href="readme.html">Read Overview →</a>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🚀 Roadmap</h3>
+                    <p>Explore our development roadmap, upcoming features, and long-term vision for the platform.</p>
+                    <a href="roadmap.html">View Roadmap →</a>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🤝 Contributing</h3>
+                    <p>Join our community! Learn how to contribute, report bugs, suggest features, and improve documentation.</p>
+                    <a href="contributing.html">Contribute →</a>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>📝 Changelog</h3>
+                    <p>Stay updated with the latest releases, new features, improvements, and bug fixes.</p>
+                    <a href="changelog.html">View Changes →</a>
+                </div>
+            </section>
+            
+            <!-- Quick Links -->
+            <section class="quick-links">
+                <h2>🔗 Quick Links</h2>
+                <div class="links-grid">
+                    <a href="https://crcreditum.com" class="link-item" target="_blank">
+                        <span>🌐</span> Web Application
+                    </a>
+                    <a href="https://pypi.org/project/credit-risk-creditum/" class="link-item" target="_blank">
+                        <span>📦</span> Python Package
+                    </a>
+                    <a href="https://github.com/credit-risk-creditum/creditum" class="link-item" target="_blank">
+                        <span>💻</span> Source Code
+                    </a>
+                    <a href="https://github.com/credit-risk-creditum/creditum/issues" class="link-item" target="_blank">
+                        <span>🐛</span> Report Issues
+                    </a>
+                    <a href="https://github.com/credit-risk-creditum/creditum/discussions" class="link-item" target="_blank">
+                        <span>💬</span> Discussions
+                    </a>
+                    <a href="mailto:owolabi.omoshola@outlook.com" class="link-item">
+                        <span>📧</span> Contact
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer style="text-align: center; margin-top: 4rem; padding: 2rem; color: #6b7280;">
+                <p>© 2025 Creditum. Created by <a href="https://linkedin.com/in/omosholaowolabi" target="_blank" style="color: var(--primary-color);">Omoshola Owolabi</a>.</p>
+            </footer>
+        </main>
     </div>
+    
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+        
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (window.innerWidth <= 768 && 
+                !sidebar.contains(event.target) && 
+                !toggle.contains(event.target) && 
+                sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
 </body>
 </html>

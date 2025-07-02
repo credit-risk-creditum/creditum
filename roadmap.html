@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creditum Roadmap | Documentation</title>
+    <link rel="stylesheet" href="docs-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <button class="mobile-menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+    
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <h2>📚 Documentation</h2>
+            
+            <div class="nav-section">
+                <h3>Getting Started</h3>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="readme.html" class="nav-link">Overview</a>
+                <a href="https://crcreditum.com" class="nav-link" target="_blank">Live App ↗</a>
+            </div>
+            
+            <div class="nav-section">
+                <h3>Development</h3>
+                <a href="roadmap.html" class="nav-link active">Roadmap</a>
+                <a href="contributing.html" class="nav-link">Contributing</a>
+                <a href="changelog.html" class="nav-link">Changelog</a>
+            </div>
+            
+            <div class="nav-section">
+                <h3>Resources</h3>
+                <a href="https://pypi.org/project/credit-risk-creditum/" class="nav-link" target="_blank">Python Package ↗</a>
+                <a href="https://github.com/credit-risk-creditum/creditum" class="nav-link" target="_blank">GitHub ↗</a>
+                <a href="https://www.linkedin.com/company/creditum-credit-risk/" class="nav-link" target="_blank">LinkedIn ↗</a>
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <h1>Creditum Roadmap</h1>
+
+                <div class="toc">
+                    <h3>Table of Contents</h3>
+                    <ul>
+                        <li><a href="#current-version">Current Version (v1.0)</a></li>
+                        <li><a href="#q1-2025">Q1 2025</a></li>
+                        <li><a href="#q2-2025">Q2 2025</a></li>
+                        <li><a href="#q3-2025">Q3 2025</a></li>
+                        <li><a href="#q4-2025">Q4 2025</a></li>
+                        <li><a href="#community-requests">Community Requests</a></li>
+                        <li><a href="#influence-roadmap">How to Influence the Roadmap</a></li>
+                        <li><a href="#success-metrics">Success Metrics</a></li>
+                    </ul>
+                </div>
+
+                <h2 id="current-version">🚀 Current Version (v1.0)</h2>
+
+                <h3>✅ Completed Features</h3>
+                <ul>
+                    <li>Credit risk assessment web simulator</li>
+                    <li>Python package for credit scoring</li>
+                    <li>Basic stress testing capabilities</li>
+                    <li>FRED economic data integration</li>
+                    <li>CRA compliance heatmap</li>
+                    <li>Docker deployment setup</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="q1-2025">📅 Q1 2025</h2>
+
+                <h3>🔄 In Progress</h3>
+                <h4>REST API Launch</h4>
+                <ul>
+                    <li>Public API endpoints for credit scoring</li>
+                    <li>Authentication and rate limiting</li>
+                    <li>Comprehensive API documentation</li>
+                    <li>SDKs for multiple languages</li>
+                </ul>
+
+                <h4>Enhanced Documentation</h4>
+                <ul>
+                    <li>Interactive API explorer</li>
+                    <li>Video tutorials</li>
+                    <li>Best practices guide</li>
+                    <li>Integration examples</li>
+                </ul>
+
+                <h3>🎯 Planned</h3>
+                <h4>Advanced Analytics Dashboard</h4>
+                <ul>
+                    <li>Portfolio-level risk metrics</li>
+                    <li>Historical trend analysis</li>
+                    <li>Comparative benchmarking</li>
+                    <li>Custom reporting tools</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="q2-2025">📅 Q2 2025</h2>
+
+                <h3>🔮 Future Features</h3>
+                <h4>Machine Learning Enhancements</h4>
+                <ul>
+                    <li>AutoML for custom risk models</li>
+                    <li>Real-time model retraining</li>
+                    <li>Explainable AI features</li>
+                    <li>Bias detection and mitigation</li>
+                </ul>
+
+                <h4>Collaboration Features</h4>
+                <ul>
+                    <li>Team workspaces</li>
+                    <li>Shared portfolios</li>
+                    <li>Comment and annotation system</li>
+                    <li>Audit trails</li>
+                </ul>
+
+                <h4>Mobile Application</h4>
+                <ul>
+                    <li>iOS and Android apps</li>
+                    <li>Offline credit scoring</li>
+                    <li>Push notifications for alerts</li>
+                    <li>Mobile-optimized dashboard</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="q3-2025">📅 Q3 2025</h2>
+
+                <h3>🌐 Enterprise Features</h3>
+                <h4>Advanced Integrations</h4>
+                <ul>
+                    <li>Salesforce connector</li>
+                    <li>Bank core system APIs</li>
+                    <li>Credit bureau integrations</li>
+                    <li>ERP system connections</li>
+                </ul>
+
+                <h4>Compliance & Security</h4>
+                <ul>
+                    <li>SOC 2 Type II certification</li>
+                    <li>GDPR compliance tools</li>
+                    <li>Advanced encryption</li>
+                    <li>Multi-factor authentication</li>
+                </ul>
+
+                <h4>Performance & Scale</h4>
+                <ul>
+                    <li>Microservices architecture</li>
+                    <li>Real-time processing</li>
+                    <li>Global CDN deployment</li>
+                    <li>99.99% uptime SLA</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="q4-2025">📅 Q4 2025</h2>
+
+                <h3>🎯 Advanced Capabilities</h3>
+                <h4>Predictive Analytics</h4>
+                <ul>
+                    <li>Early warning systems</li>
+                    <li>Default probability forecasting</li>
+                    <li>Market risk indicators</li>
+                    <li>Stress scenario generator</li>
+                </ul>
+
+                <h4>White-label Solutions</h4>
+                <ul>
+                    <li>Embeddable widgets</li>
+                    <li>Custom branding options</li>
+                    <li>API-first architecture</li>
+                    <li>Partner marketplace</li>
+                </ul>
+
+                <h4>AI-Powered Insights</h4>
+                <ul>
+                    <li>Natural language queries</li>
+                    <li>Automated report generation</li>
+                    <li>Anomaly detection</li>
+                    <li>Recommendation engine</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="community-requests">💡 Community Requests</h2>
+
+                <h3>Top Feature Requests</h3>
+                <ol>
+                    <li><strong>Multi-currency Support</strong> - Handle international portfolios</li>
+                    <li><strong>Batch Processing</strong> - Upload and process large datasets</li>
+                    <li><strong>Custom Risk Models</strong> - Build proprietary scoring models</li>
+                    <li><strong>Real-time Monitoring</strong> - Live portfolio tracking</li>
+                    <li><strong>Data Export Tools</strong> - Enhanced data portability</li>
+                </ol>
+
+                <h3>Experimental Features</h3>
+                <ul>
+                    <li>Blockchain-based credit scoring</li>
+                    <li>Alternative data sources (social media, IoT)</li>
+                    <li>Quantum computing applications</li>
+                    <li>Decentralized identity verification</li>
+                </ul>
+
+                <hr>
+
+                <h2 id="influence-roadmap">🤝 How to Influence the Roadmap</h2>
+
+                <p>We value community input! Here's how you can help shape Creditum's future:</p>
+
+                <ol>
+                    <li><strong>🗳️ Vote on Features</strong> - Star issues you care about</li>
+                    <li><strong>💬 Join Discussions</strong> - Share your use cases and needs</li>
+                    <li><strong>📝 Submit Proposals</strong> - Create detailed feature requests</li>
+                    <li><strong>🧪 Beta Testing</strong> - Help test new features early</li>
+                    <li><strong>🤝 Partnerships</strong> - Collaborate on enterprise features</li>
+                </ol>
+
+                <hr>
+
+                <h2 id="success-metrics">📊 Success Metrics</h2>
+
+                <h3>2025 Goals</h3>
+                <ul>
+                    <li>10,000+ active users</li>
+                    <li>100+ enterprise customers</li>
+                    <li>99.9% uptime</li>
+                    <li>Sub-100ms API response times</li>
+                    <li>50+ integrations</li>
+                </ul>
+
+                <h3>Long-term Vision</h3>
+                <ul>
+                    <li><strong>2026</strong>: Industry-leading credit risk platform</li>
+                    <li><strong>2027</strong>: Global expansion and regulatory compliance</li>
+                    <li><strong>2028</strong>: AI-native financial risk assessment</li>
+                </ul>
+
+                <hr>
+
+                <p><em>Last updated: January 2025</em></p>
+
+                <blockquote>
+                    💡 This roadmap is subject to change based on user feedback, market conditions, and technical considerations. We're committed to transparency and will update this document regularly.
+                </blockquote>
+
+                <p><strong>Have suggestions?</strong> <a href="https://github.com/credit-risk-creditum/creditum/issues" target="_blank">Open an issue</a> or start a <a href="https://github.com/credit-risk-creditum/creditum/discussions" target="_blank">discussion</a>!</p>
+            </div>
+            
+            <footer>
+                <p><a href="index.html">← Back to Documentation Home</a></p>
+            </footer>
+        </main>
+    </div>
+    
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+        
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (window.innerWidth <= 768 && 
+                !sidebar.contains(event.target) && 
+                !toggle.contains(event.target) && 
+                sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

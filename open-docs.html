@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Creditum Documentation</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            margin: 0.5rem;
+            transition: background-color 0.2s;
+        }
+        .button:hover {
+            background-color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Creditum Documentation</h1>
+    <p>Choose how to view the documentation:</p>
+    
+    <a href="index.html" class="button">📚 Open Documentation</a>
+    <br><br>
+    
+    <p><strong>Direct Links:</strong></p>
+    <a href="readme.html" class="button">📖 Project Overview</a>
+    <a href="roadmap.html" class="button">🗺️ Roadmap</a>
+    <a href="contributing.html" class="button">🤝 Contributing</a>
+    <a href="changelog.html" class="button">📝 Changelog</a>
+    
+    <hr style="margin: 2rem 0;">
+    
+    <p><em>For the best experience, serve these files using a web server:</em></p>
+    <pre style="background: #f3f4f6; padding: 1rem; border-radius: 0.5rem; text-align: left;">
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx http-server
+
+# Then visit: http://localhost:8000
+    </pre>
+</body>
+</html>
